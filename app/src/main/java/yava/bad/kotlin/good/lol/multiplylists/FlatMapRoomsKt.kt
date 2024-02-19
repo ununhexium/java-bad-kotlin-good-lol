@@ -1,18 +1,16 @@
 package yava.bad.kotlin.good.lol.multiplylists
 
-object FlatMapRoomsKt {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val count = 5
+fun main(args: Array<String>) {
+    val count = 5
 
-        val singleRoom = callService()
+    val singleRoom = callService()
 
-        // fake having multiple rooms
-        val rooms = List(count) { singleRoom }.flatten()
-        println(rooms.size)
-    }
+    // fake having multiple rooms
+    val rooms = List(count) { singleRoom }.flatten()
 
-    private fun callService(): List<Room> {
-        return java.util.List.of(Room(listOf(7)))
-    }
+    // "format" it a bit
+    println(
+        rooms.joinToString(" / ") {
+            it.travellerIds.joinToString(", ") { it.toString() } }
+    )
 }

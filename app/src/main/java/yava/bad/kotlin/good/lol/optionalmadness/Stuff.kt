@@ -7,3 +7,12 @@ data class SubFieldAlsoWithALongName(val detailConcerningSomethingImportant: Det
 data class DetailConcerningSomethingImportant(val actualDataThatYourReallyWanted: ActualDataThatYourReallyWanted?)
 
 class ActualDataThatYourReallyWanted
+
+fun callService() =
+    PackagedStuffWithLooongName(
+        SubFieldAlsoWithALongName(
+            DetailConcerningSomethingImportant(
+                ActualDataThatYourReallyWanted()
+            )
+        )
+    )
