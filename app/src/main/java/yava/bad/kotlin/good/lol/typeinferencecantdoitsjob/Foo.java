@@ -13,7 +13,7 @@
  */
 
 
-package yava.bad.kotlin.good.lol.lombokcantdoitsjob;
+package yava.bad.kotlin.good.lol.typeinferencecantdoitsjob;
 
 import lombok.val;
 

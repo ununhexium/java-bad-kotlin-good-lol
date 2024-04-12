@@ -1,7 +1,4 @@
-package yava.bad.kotlin.good.lol.lombokcantdoitsjob
-
-import java.util.List
-import java.util.Map
+package yava.bad.kotlin.good.lol.typeinferencecantdoitsjob
 
 fun main() {
     // automatically List<Map<String, List<String>>>
