@@ -3,7 +3,7 @@ package yava.bad.kotlin.good.lol.notfunctional;
 import java.util.function.*;
 
 interface IfMoreThan2Inputs<A, B, C, R> {
-    R doStuff(A a, B b, C c);
+    R apply(A a, B b, C c);
 }
 
 public class WhoIsWho {
@@ -59,5 +59,13 @@ public class WhoIsWho {
 
         // if you need more than 2 inputs, a new declaration is needed.
         IfMoreThan2Inputs<Object, Object, Object, Object> threeInputs = (o1, o2, o3) -> new Object();
+
+        Lib1<Integer> operation = (it) -> it;
+        // Can't do that even though they have the exact same signature.
+        // call(operation);
+    }
+
+    public static void call(Lib2<Integer> f) {
+        f.apply(1);
     }
 }
